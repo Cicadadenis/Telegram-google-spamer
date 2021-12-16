@@ -1,0 +1,511 @@
+import time
+import json
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from webdriver_manager.chrome import ChromeDriverManager
+
+
+  
+driver = webdriver.Chrome(ChromeDriverManager().install())
+i = 0
+x = 0
+cname = []
+rname = open('users.txt', 'r')
+cname.append(rname.readlines())
+reklama = open('message.txt', "r", encoding="utf-8")
+msg = reklama.read()
+reklama.close()
+n = (len(cname[0]))
+
+driver.get("https://web.telegram.org/k")
+time.sleep(45)
+while i < n:
+    na = cname[0][0][:-1]
+    search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+    search.send_keys(na, Keys.RETURN)
+    time.sleep(5)
+    search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+    driver.implicitly_wait(10)
+    ActionChains(driver).move_to_element(search2).click(search2).perform()
+    time.sleep(8)
+    msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+    msgBox.send_keys(msg, Keys.RETURN)
+    i = i + 1
+    x = x + 1
+    if i < n:
+        na = cname[0][1][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(3)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(4)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][2][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][3][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][4][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][5][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][6][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+        
+    if i < n:
+        na = cname[0][7][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][8][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+
+    if i < n:
+        na = cname[0][1][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][2][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][3][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][4][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][5][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][6][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+        
+    if i < n:
+        na = cname[0][7][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][8][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+
+    if i < n:
+        na = cname[0][1][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][2][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][3][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][4][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][5][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][6][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+        
+    if i < n:
+        na = cname[0][7][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][8][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+
+    if i < n:
+        na = cname[0][9][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][10][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][12][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][13][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][14][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][15][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+        
+    if i < n:
+        na = cname[0][16][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
+        i = i + 1
+        x = x + 1
+
+    if i < n:
+        na = cname[0][17][:-1]
+        search = driver.find_element(By.XPATH, "//*[@id='column-left']/div/div/div[1]/div[2]/input")
+        search.send_keys(na, Keys.RETURN)
+        time.sleep(5)
+        search2 = driver.find_element(By.XPATH, "//*[@id='search-container']/div[2]/div/div/div[1]/div/div[1]/ul")
+        driver.implicitly_wait(10)
+        ActionChains(driver).move_to_element(search2).click(search2).perform()
+        time.sleep(8)
+        msgBox = driver.find_element(By.XPATH,"//*[@id='column-center']/div/div/div[4]/div/div[1]/div[7]/div[1]/div[1]")
+
+        msgBox.send_keys(msg, Keys.RETURN)
